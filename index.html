@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="openModalButton">Login</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalButton" class="close">&times;</span>
+            
+            <!-- Login Form -->
+            <div id="loginForm" class="form-container">
+                <h2>Login</h2>
+                <form>
+                    <input type="text" placeholder="Username" required><br>
+                    <input type="password" placeholder="Password" required><br>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <span id="showRegister">Register here</span></p>
+            </div>
+            
+            <!-- Register Form It will hidden but after clicking it will trigger -->
+            <div id="registerForm" class="form-container" style="display: none;">
+                <h2>Register</h2>
+                <form>
+                    <input type="text" placeholder="Username" required><br>
+                    <input type="email" placeholder="Email" required><br>
+                    <input type="password" placeholder="Password" required><br>
+                    <input type="password" placeholder="Confirm Password" required><br>
+                    <input type="tel" placeholder="Phone Number" required><br>
+                    <button type="submit">Register</button>
+                </form>
+                <p>Already have an account? <span id="showLogin">Login here</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
