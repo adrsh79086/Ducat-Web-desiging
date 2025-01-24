@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Slider</title>
+  <style>
+    /* CSS Styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    }
+
+    .slider-container {
+      text-align: center;
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 300px;
+      height: 8px;
+      border-radius: 5px;
+      background: #ddd;
+      outline: none;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .slider:hover {
+      background: #aaa;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #007bff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .value {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eius tempore, fugiat autem soluta officiis! Quisquam veritatis porro labore quibusdam vel praesentium. Molestias repudiandae eligendi, non hic ullam iure explicabo.
+  <div class="slider-container">
+    <input type="range" class="slider" id="slider" min="0" max="100" value="50">
+    <div class="value" id="sliderValue">50</div>
+  </div>
+
+  <script>
+    // JavaScript
+    const slider = document.getElementById('slider');
+    const sliderValue = document.getElementById('sliderValue');
+
+    // Update the displayed value as the slider moves
+    slider.addEventListener('input', () => {
+      sliderValue.textContent = slider.value;
+    });
+  </script>
 </body>
 </html>
