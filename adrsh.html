@@ -62,12 +62,16 @@
   <div class="slider-container">
     <input type="range" class="slider" id="slider" min="0" max="100" value="50">
     <div class="value" id="sliderValue">50</div>
+    <button id="So" class="a">Try me</button>
   </div>
 
   <script>
+
+       
     // JavaScript
     const slider = document.getElementById('slider');
     const sliderValue = document.getElementById('sliderValue');
+    const a = document.getElementById('so');
 
     // Update the displayed value as the slider moves
     slider.addEventListener('input', () => {
